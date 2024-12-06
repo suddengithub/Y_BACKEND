@@ -1,20 +1,16 @@
 package com.kh.MINI.computer2.vo;
 
-public class PCPartVO {
-    private String category;
-    private String name;
-    private int price;
-    private String image;
+public class OwnPCVO {
+    private String category; // 부품 카테고리
+    private String name;     // 부품 이름
+    private int price;       // 가격
+    private String image;    // 이미지 경로
+    private int quantity;    // 수량
 
-    public PCPartVO() {}
-
-    public PCPartVO(String category, String name, int price, String image) {
-        this.category = category;
-        this.name = name;
-        this.price = price;
-        this.image = image;
+    public OwnPCVO(String cpu, String s, int i, String s1, int i1) {
     }
 
+    // Getters and Setters
     public String getCategory() {
         return category;
     }
@@ -45,5 +41,13 @@ public class PCPartVO {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }
