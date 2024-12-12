@@ -1,13 +1,12 @@
-package com.kh.MINI;
+package com.kh.MINI.computer2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MINIApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MINIApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
-
 }
