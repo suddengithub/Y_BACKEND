@@ -29,6 +29,9 @@ public class OrderVO {
     }
 
     public void setTotal(double total) {
+        if (total < 0) {
+            throw new IllegalArgumentException("Total price cannot be negative");
+        }
         this.total = total;
     }
 
@@ -37,6 +40,19 @@ public class OrderVO {
     }
 
     public void setItems(List<ItemVO> items) {
+        if (items == null || items.isEmpty()) {
+            throw new IllegalArgumentException("Items list cannot be null or empty");
+        }
         this.items = items;
+    }
+
+    // Optional: toString method for easier debugging
+    @Override
+    public String toString() {
+        return "OrderVO{" +
+                "orderNumber='" + orderNumber + '\'' +
+                ", total=" + total +
+                ", items=" + items +
+                '}';
     }
 }
